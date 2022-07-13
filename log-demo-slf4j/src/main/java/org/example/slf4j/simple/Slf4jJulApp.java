@@ -1,4 +1,4 @@
-package org.example.slf4j;
+package org.example.slf4j.simple;
 
 /**
  * Slf4j与JUL集成。 Java Util logging

@@ -1,4 +1,4 @@
-package org.example.slf4j;
+package org.example.slf4j.simple;
 
 
 import org.slf4j.Logger;

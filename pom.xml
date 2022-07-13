@@ -5,12 +5,17 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.example</groupId>
-  <artifactId>logtest</artifactId>
+  <artifactId>java-log-demo</artifactId>
+  <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
 
-  <name>logtest</name>
-  <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
+  <modules>
+    <module>log-demo-log4j-bridge</module>
+    <module>log-demo-slf4j</module>
+    <module>log-demo-simple</module>
+  </modules>
+
+  <name>java-log-demo</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -19,83 +24,80 @@
     <logback.version>1.2.11</logback.version>
     <log4j.version>1.2.17</log4j.version>
     <slf4j.version>1.7.36</slf4j.version>
+    <log4j2.version>2.18.0</log4j2.version>
   </properties>
 
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.11</version>
-      <scope>test</scope>
-    </dependency>
-<!--https://logging.apache.org/log4j/2.x/maven-artifacts.html#Using_Log4j_in_your_Apache_Maven_build-->
-    <!--log4j2 start -->
-    <!--      <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-api</artifactId>
-            <version>2.18.0</version>
-          </dependency>
-          <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-core</artifactId>
-            <version>2.18.0</version>
-          </dependency>-->
-    <!--log4j2 end -->
+  <dependencyManagement>
+    <dependencies>
+      <!--   Junit   -->
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>4.11</version>
+        <scope>test</scope>
+      </dependency>
 
+      <!--   log4j 引入   -->
+      <dependency>
+        <groupId>log4j</groupId>
+        <artifactId>log4j</artifactId>
+        <version>1.2.17</version>
+<!--        <type>bundle</type>-->
+      </dependency>
 
-    <!--log4j start-->
-    <dependency>
-      <groupId>log4j</groupId>
-      <artifactId>log4j</artifactId>
-      <version>1.2.17</version>
-<!--      <type>bundle</type>-->
-    </dependency>
+      <!--   log4j2 引入   -->
+      <!--https://logging.apache.org/log4j/2.x/maven-artifacts.html#Using_Log4j_in_your_Apache_Maven_build-->
+      <!--log4j2 start -->
+        <dependency>
+          <groupId>org.apache.logging.log4j</groupId>
+          <artifactId>log4j-api</artifactId>
+          <version>${log4j2.version}</version>
+        </dependency>
+        <dependency>
+          <groupId>org.apache.logging.log4j</groupId>
+          <artifactId>log4j-core</artifactId>
+          <version>${log4j2.version}</version>
+        </dependency>
+      <!--log4j2 end -->
 
-    <!--log4j 与 slf4j 桥接START-->
- <!--   <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-log4j12</artifactId>
-      <version>1.7.36</version>
-      <type>pom</type>
-    </dependency>-->
-    <!--log4j 与 slf4j 桥接END-->
+      <!--   logback 引入   -->
+      <dependency>
+        <groupId>ch.qos.logback</groupId>
+        <artifactId>logback-classic</artifactId>
+        <version>${logback.version}</version>
+      </dependency>
 
-    <!--log4j End-->
+      <!--   sfl4j api 引入 slf4j适配器中都自带 可以不用配  -->
 
-    <!-- slf4j 与 jul 桥接集成 -->
-    <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-jdk14</artifactId>
-      <version>1.7.36</version>
-    </dependency>
+      <!--   sfl4j simple 引入  （slf4j 官方提供的日志输出 simple 实现，功能简单）  -->
+      <!-- slf4j 自带的日志实现   -->
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-simple</artifactId>
+        <version>${slf4j.version}</version>
+      </dependency>
 
+      <!-- slf4j 兼容 log4j 1.x 适配-->
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-reload4j</artifactId>
+        <version>${slf4j.version}</version>
+      </dependency>
+      <!-- slf4j 与 jul 桥接集成 -->
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-jdk14</artifactId>
+        <version>${slf4j.version}</version>
+      </dependency>
 
-
-    <!-- slf4j 兼容 log4j 1.x 桥接-->
-    <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-reload4j</artifactId>
-      <version>1.7.36</version>
-    </dependency>
-
-    <!-- slf4j 自带的日志实现   -->
-<!--    <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-simple</artifactId>
-      <version>1.7.36</version>
-    </dependency>-->
-
-    <!-- logback START-->
-<!--    <dependency>
-      <groupId>ch.qos.logback</groupId>
-      <artifactId>logback-classic</artifactId>
-      <version>${logback.version}</version>
-    </dependency>-->
-    <!-- logback END-->
-
-
-
-  </dependencies>
+      <!--    slf4j Bridge Log4j-->
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>log4j-over-slf4j</artifactId>
+        <version>${slf4j.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
@@ -138,6 +140,12 @@
         <plugin>
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
+        </plugin>
+        <!--    用以支持bundle 类型的包    -->
+        <plugin>
+          <groupId>org.apache.felix</groupId>
+          <artifactId>maven-bundle-plugin</artifactId>
+          <extensions>true</extensions>
         </plugin>
       </plugins>
     </pluginManagement>
