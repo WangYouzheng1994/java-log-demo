@@ -1,5 +1,8 @@
 package org.example.slf4j.simple;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /**
  * Slf4j与JUL集成。 Java Util logging
  *   <!-- slf4j 与 jul 桥接集成 -->
@@ -11,6 +14,10 @@ package org.example.slf4j.simple;
  */
 public class Slf4jJulApp {
     public static void main(String[] args) {
+        Logger logger = LoggerFactory.getLogger(Slf4jLog4j2App.class);
 
+        logger.info("slf4j + JUL");
+        logger.debug("slf4j + JUL");
+        logger.warn("slf4j + JUL");
     }
 }

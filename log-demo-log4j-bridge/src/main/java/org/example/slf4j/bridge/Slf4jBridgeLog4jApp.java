@@ -3,7 +3,7 @@ package org.example.slf4j.bridge;
 import org.apache.log4j.Logger;
 
 /**
- * @Description: slf4j 使用桥接器 解决原有项目使用log4j 后 引入slf4j 报错的问题。
+ * @Description: slf4j 使用桥接器 解决原有项目使用log4j后，引入slf4j的报错的问题。
  * @Author: WangYouzheng
  * @Date: 2022/7/13 15:11
  * @Version: V1.0
@@ -46,6 +46,5 @@ public class Slf4jBridgeLog4jApp {
         logger.error("我是Slf4J派生的--error");
         logger.trace("我是Slf4J派生的--trace");
         logger.fatal("我是Slf4J派生的--fatal");
-
     }
 }
