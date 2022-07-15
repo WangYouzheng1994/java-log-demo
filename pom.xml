@@ -13,6 +13,7 @@
     <module>log-demo-log4j-bridge</module>
     <module>log-demo-slf4j</module>
     <module>log-demo-simple</module>
+    <module>log-demo-develop-guideline</module>
   </modules>
 
   <name>java-log-demo</name>
