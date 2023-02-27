@@ -15,7 +15,7 @@
     <module>log-demo-simple</module>
     <module>log-demo-develop-guideline</module>
     <module>log-demo-logback</module>
-    <module>log-demo-slf4j/slf4j-log4j</module>
+    <module>log-demo-slf4j</module>
   </modules>
 
   <name>java-log-demo</name>
