@@ -1,4 +1,4 @@
-package org.example.slf4j.simple;
+package org.example.slf4j.simple.jul;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,7 +14,7 @@ import org.slf4j.LoggerFactory;
  */
 public class Slf4jJulApp {
     public static void main(String[] args) {
-        Logger logger = LoggerFactory.getLogger(Slf4jLog4j2App.class);
+        Logger logger = LoggerFactory.getLogger(Slf4jJulApp.class);
 
         logger.info("slf4j + JUL");
         logger.debug("slf4j + JUL");

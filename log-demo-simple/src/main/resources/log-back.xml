@@ -13,7 +13,7 @@
         </layout>
     </appender>
 
-    <root level="ERROR">
+    <root level="info">
 <!--        <appender-ref ref="FILE"/>-->
         <appender-ref ref="console"/>
     </root>

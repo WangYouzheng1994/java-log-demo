@@ -15,35 +15,34 @@
   <name>log-demo-log4j-bridge</name>
 
   <dependencies>
-    <!-- log4j 引入桥接包以后，需要屏蔽对应的原生框架包 -->
-    <!--<dependency>
+    <!-- log4j 引入桥接包以后，需要屏蔽对应的原生框架包
+   <dependency>
       <groupId>log4j</groupId>
       <artifactId>log4j</artifactId>
     </dependency>-->
 
-
-    <!--  LogBack 这样就可以实现桥接到slf4j-> logback 不用改代码api，还是log4j api调用 -->
-<!--    <dependency>
+    <!--  LogBack 这样就可以实现桥接到slf4j-> logback 不用改代码api，还是log4j api调用
+  <dependency>
       <groupId>ch.qos.logback</groupId>
       <artifactId>logback-classic</artifactId>
     </dependency>-->
 
-    <!-- slf4j 兼容 log4j 1.x 适配，这样就可以实现桥接到slf4j-> log4j 不用改代码api，还是log4j api调用-->
-<!--    <dependency>
+     <!--slf4j 兼容 log4j 1.x 适配，这样就可以实现桥接到slf4j-> log4j 不用改代码api，还是log4j api调用
+    <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-reload4j</artifactId>
-    </dependency>-->
+    </dependency>
+    -->
 
-    <!--  slf4j Bridge Log4j  -->
+   <!-- slf4j Bridge Log4j START
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>log4j-over-slf4j</artifactId>
     </dependency>
+   slf4j Bridge Log4j END -->
 
 
   </dependencies>
-
-
 
   <build>
     <plugins>

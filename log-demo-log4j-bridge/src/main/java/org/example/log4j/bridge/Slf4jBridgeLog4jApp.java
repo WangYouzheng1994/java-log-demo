@@ -1,4 +1,4 @@
-package org.example.slf4j.bridge;
+package org.example.log4j.bridge;
 
 import org.apache.log4j.Logger;
 
@@ -11,8 +11,6 @@ import org.apache.log4j.Logger;
 public class Slf4jBridgeLog4jApp {
     public static void main(String[] args) {
         derived();
-
-        logNative();
     }
 
     /**

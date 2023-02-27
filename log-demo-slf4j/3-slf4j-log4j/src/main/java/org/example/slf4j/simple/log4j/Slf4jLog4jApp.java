@@ -1,5 +1,4 @@
-package org.example.slf4j.simple;
-
+package org.example.slf4j.simple.log4j;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,12 +19,11 @@ import org.slf4j.LoggerFactory;
  *     </dependency>
  *
  */
-public class Slf4jLog4j2App {
+public class Slf4jLog4jApp {
     public static void main(String[] args) {
-        Logger logger = LoggerFactory.getLogger(Slf4jLog4j2App.class);
-
+        Logger logger = LoggerFactory.getLogger(Slf4jLog4jApp.class);
+        logger.warn("slf4j + log4j");
         logger.info("slf4j + log4j");
         logger.debug("slf4j + log4j");
-        logger.warn("slf4j + log4j");
     }
 }
