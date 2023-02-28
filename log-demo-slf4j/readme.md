@@ -1,1 +1,4 @@
 slf4j 与 log4j、JUL、Logback的集成使用，核心表现为代码API使用Slf4j，底层为不同的日志框架输出。
+
+
+https://www.slf4j.org/images/concrete-bindings.png

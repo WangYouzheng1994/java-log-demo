@@ -39,6 +39,7 @@
         <module>1-slf4j-simple</module>
         <module>2-slf4j-jul</module>
         <module>3-slf4j-log4j</module>
+        <module>4-slf4j-logback</module>
     </modules>
 
     <build>

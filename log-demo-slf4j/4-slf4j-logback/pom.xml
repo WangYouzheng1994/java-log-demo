@@ -6,25 +6,25 @@
         <artifactId>log-demo-slf4j</artifactId>
         <groupId>org.example</groupId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath>
+<!--        <relativePath>pom.xml</relativePath>-->
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>2-slf4j-jul</artifactId>
+    <artifactId>4-slf4j-logback</artifactId>
 
-    <name>2-slf4j-jul</name>
+    <name>4-slf4j-logback</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencies>
-        <!-- slf4j 兼容 JUL 适配 可以不用单独引入slf4j-api -->
+        <!-- logback，内嵌了slf4j-api 和 logback-core  -->
         <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-jdk14</artifactId>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.3.5</version>
         </dependency>
-
     </dependencies>
 
 </project>
