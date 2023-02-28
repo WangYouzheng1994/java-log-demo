@@ -10,10 +10,10 @@
     <packaging>pom</packaging>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>log-demo-slf4j</artifactId>
+    <artifactId>log-demo-slf4j-integrated</artifactId>
 
 
-    <name>log-demo-slf4j</name>
+    <name>log-demo-slf4j-integrated</name>
 
     <dependencies>
         <dependency>

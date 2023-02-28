@@ -9,10 +9,14 @@
 
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>log-demo-log4j-bridge</artifactId>
-  <packaging>jar</packaging>
+  <artifactId>log-demo-slf4j-bridge</artifactId>
+  <packaging>pom</packaging>
 
-  <name>log-demo-log4j-bridge</name>
+  <name>log-demo-slf4j-bridge</name>
+  <modules>
+    <module>slf4j-bridge-log4j</module>
+    <module>slf4j-bridge-jul</module>
+  </modules>
 
   <dependencies>
     <!-- log4j 引入桥接包以后，需要屏蔽对应的原生框架包

@@ -10,12 +10,11 @@
   <version>1.0-SNAPSHOT</version>
 
   <modules>
-    <module>log-demo-log4j-bridge</module>
-    <module>log-demo-slf4j</module>
+    <module>log-demo-slf4j-bridge</module>
     <module>log-demo-simple</module>
     <module>log-demo-develop-guideline</module>
     <module>log-demo-logback</module>
-    <module>log-demo-slf4j</module>
+    <module>log-demo-slf4j-integrated</module>
   </modules>
 
   <name>java-log-demo</name>
@@ -110,6 +109,13 @@
       <dependency>
         <groupId>org.slf4j</groupId>
         <artifactId>log4j-over-slf4j</artifactId>
+        <version>${slf4j.version}</version>
+      </dependency>
+
+      <!-- slf4j bridge jul -->
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>jul-to-slf4j</artifactId>
         <version>${slf4j.version}</version>
       </dependency>
     </dependencies>
