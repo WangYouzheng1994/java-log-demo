@@ -13,7 +13,7 @@
 2. 组件
 - logger，日志记录器，定义级别用的
 - appender输出目标，比如控制台 ch.qos.logback.core.ConsoleAppender，file文件，
-- layout，日志的格式化输出方式。 logback使用layout封装了encoder
+- layout，日志的输出格式化方式。 logback使用layout封装了encoder
 
 3. 配置文件
 - logback.groovy

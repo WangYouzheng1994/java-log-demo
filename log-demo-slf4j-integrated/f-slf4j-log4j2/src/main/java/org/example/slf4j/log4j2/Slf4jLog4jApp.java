@@ -21,6 +21,33 @@ import org.slf4j.LoggerFactory;
  */
 public class Slf4jLog4jApp {
     public static void main(String[] args) {
+//        fileXML();
+        splitFile();
+    }
+
+    public static void defaultXML() {
+        Logger logger = LoggerFactory.getLogger(Slf4jLog4jApp.class);
+        logger.warn("slf4j + log4j");
+        logger.info("slf4j + log4j");
+        logger.debug("slf4j + log4j");
+    }
+
+    /**
+     * https://logging.apache.org/log4j/2.x/manual/configuration.html#AutomaticConfiguration
+     */
+    public static void fileXML() {
+        System.setProperty("log4j2.configurationFile", "log4j2-file.xml");
+        Logger logger = LoggerFactory.getLogger(Slf4jLog4jApp.class);
+        logger.warn("slf4j + log4j");
+        logger.info("slf4j + log4j");
+        logger.debug("slf4j + log4j");
+    }
+
+    /**
+     * 日志拆分
+     */
+    public static void splitFile() {
+        System.setProperty("log4j2.configurationFile", "log4j2-splitfile.xml");
         Logger logger = LoggerFactory.getLogger(Slf4jLog4jApp.class);
         logger.warn("slf4j + log4j");
         logger.info("slf4j + log4j");
