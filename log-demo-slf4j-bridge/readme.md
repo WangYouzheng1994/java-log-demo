@@ -8,3 +8,5 @@
 然后引入slf4j-over-log4j （将log4j的调用替换成调用slf4j）
 然后引入要输出的全新的日志框架，问题解决~ （适配到新的日志实现）
 
+2. 官方对于桥接器的组件介绍
+> https://www.slf4j.org/legacy.html
