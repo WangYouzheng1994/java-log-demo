@@ -91,6 +91,14 @@
         <artifactId>slf4j-reload4j</artifactId>
         <version>${slf4j.version}</version>
       </dependency>
+
+      <!--  很多教程以前写的用这个，现在他已经重定向到 slf4j-reload4j了
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-log4j12</artifactId>
+        <version>${slf4j.version}</version>
+      </dependency>   -->
+
       <!-- slf4j 与 jul 桥接集成 -->
       <dependency>
         <groupId>org.slf4j</groupId>

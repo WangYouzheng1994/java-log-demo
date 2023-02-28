@@ -1,0 +1,22 @@
+<configuration scan="true" scanPeriod="30 seconds">
+
+    <!--  配置文件通用属性：提供统一的配置键值对  -->
+    <property name="pattern" value="%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"></property>
+    <!--  配置控制台输出  -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- encoders are assigned the type
+             ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+
+        <!--        -->
+        <encoder>
+<!--            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>-->
+            <pattern>${pattern}</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="org.example" level="WARN"/>
+
+    <root level="trace">
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>

@@ -40,6 +40,7 @@
         <module>2-slf4j-jul</module>
         <module>3-slf4j-log4j</module>
         <module>4-slf4j-logback</module>
+        <module>5-slf4j-multiimport</module>
     </modules>
 
     <build>
