@@ -41,6 +41,7 @@
         <module>c-slf4j-log4j</module>
         <module>d-slf4j-logback</module>
         <module>e-slf4j-multiimport</module>
+        <module>f-slf4j-log4j2</module>
     </modules>
 
     <build>

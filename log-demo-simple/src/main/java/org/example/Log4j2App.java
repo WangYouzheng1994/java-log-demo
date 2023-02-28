@@ -16,6 +16,7 @@ import org.apache.logging.log4j.Logger;
  *     <artifactId>log4j-core</artifactId>
  *     <version>2.20.0</version>
  *   </dependency>
+ *  默认加载的配置文件时resources下面的log4j2.xml https://logging.apache.org/log4j/2.x/manual/configuration.html
  *
  * @author WangYouzheng
  * @version 1.0
