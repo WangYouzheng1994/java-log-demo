@@ -18,27 +18,27 @@
     </properties>
 
     <dependencies>
-        <!--   log4j 默认无需引入，reload4j已经有了 log4j的所有代码了   -->
-       <dependency>
-           <groupId>log4j</groupId>
-           <artifactId>log4j</artifactId>
-       </dependency>
-
-        <!-- slf4j与log4j进行集成 -->
+        <!--  引入log4j2 -->
         <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-reload4j</artifactId>
-            <version>1.7.36</version>
-            <!--
-            举例说明什么时候需要引入log4j
-            <exclusions>
-                <exclusion>
-                    <groupId>ch.qos.reload4j</groupId>
-                    <artifactId>reload4j</artifactId>
-                </exclusion>
-            </exclusions>-->
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
         </dependency>
 
+        <!--    引入log4j2 和 slf4j的集成    -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j-impl</artifactId>
+        </dependency>
+
+        <!--   引入slf4j门面     -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
     </dependencies>
 
 </project>

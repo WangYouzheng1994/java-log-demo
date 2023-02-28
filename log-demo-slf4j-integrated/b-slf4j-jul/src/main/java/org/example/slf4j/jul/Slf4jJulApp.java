@@ -1,4 +1,4 @@
-package org.example.slf4j.simple.jul;
+package org.example.slf4j.jul;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
