@@ -1,5 +1,8 @@
 package org.example;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 /**
  * Log4j2App
  *
@@ -21,6 +24,12 @@ package org.example;
 public class Log4j2App {
 
     public static void main(String[] args) {
-
+        Logger logger = LogManager.getLogger(Log4j2App.class);
+        logger.fatal("我是log4j2 - fatal");
+        logger.error("我是log4j2 - error");
+        logger.warn("我是log4j2 - warn");
+        logger.info("我是log4j2 - info");
+        logger.debug("我是log4j2 - debug");
+        logger.trace("我是log4j2 - trace");
     }
 }

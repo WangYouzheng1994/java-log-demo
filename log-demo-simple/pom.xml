@@ -22,11 +22,13 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
         </dependency>
+
         <!--   log4j1.0 引入   -->
         <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
         </dependency>
+
         <!--  LogBack  -->
         <dependency>
             <groupId>ch.qos.logback</groupId>
