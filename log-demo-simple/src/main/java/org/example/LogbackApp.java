@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * logback整合的时候，logback的classic包已经自动整合了slf4j。
+ * logback整合的时候，logback的classic包已经自动整合了slf4j。 会读取 logback.xml
  */
 public class LogbackApp {
     public static void main(String[] args) {
