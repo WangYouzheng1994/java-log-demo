@@ -1,6 +1,7 @@
-package org.example.log4j.bridge;
+package org.example.jul.bridge;
 
-import org.apache.log4j.Logger;
+
+import java.util.logging.Logger;
 
 /**
  * @Description: slf4j 使用桥接器 解决原有项目使用log4j后，引入slf4j的报错的问题。
@@ -10,41 +11,18 @@ import org.apache.log4j.Logger;
  */
 public class Slf4jBridgeLog4jApp {
     public static void main(String[] args) {
-        derived();
+        logNative();
     }
 
     /**
-     * 使用原生Log4j
+     * 使用原生JUL
      */
     public static void logNative() {
-        /**
-         * 假设 原有项目使用的是 Log4j API
-         */
-        Logger logger = Logger.getLogger(Slf4jBridgeLog4jApp.class);
-
-        logger.info("我是原生log4j--info");
-        logger.warn("我是原生log4j--warn");
-        logger.debug("我是原生log4j--debug");
-        logger.error("我是原生log4j--error");
-        logger.trace("我是原生log4j--trace");
-        logger.fatal("我是原生log4j--fatal");
-    }
-
-    /**
-     * slf4j Bridge 桥接log4J
-     */
-    public static void derived() {
-
-        /**
-         * 假设 原有项目使用的是 Log4j API
-         */
-        Logger logger = Logger.getLogger(Slf4jBridgeLog4jApp.class);
-
-        logger.info("我是Slf4J派生的log4j--info");
-        logger.warn("我是Slf4J派生的--warn");
-        logger.debug("我是Slf4J派生的--debug");
-        logger.error("我是Slf4J派生的--error");
-        logger.trace("我是Slf4J派生的--trace");
-        logger.fatal("我是Slf4J派生的--fatal");
+        Logger logger = Logger.getAnonymousLogger();
+        logger.info("我是jul的info");
+        logger.warning("我是jul的warn");
+        logger.config("我是jul的config");
+        logger.fine("我是jul的fine");
+        logger.finer("我是jul的warn");
     }
 }

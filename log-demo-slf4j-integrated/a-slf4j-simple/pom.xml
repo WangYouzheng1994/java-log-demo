@@ -3,28 +3,26 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>log-demo-slf4j</artifactId>
+        <artifactId>log-demo-slf4j-integrated</artifactId>
         <groupId>org.example</groupId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>2-slf4j-jul</artifactId>
+    <artifactId>a-slf4j-simple</artifactId>
 
-    <name>2-slf4j-jul</name>
+    <name>a-slf4j-simple</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencies>
-        <!-- slf4j 兼容 JUL 适配 可以不用单独引入slf4j-api -->
+        <!-- slf4j 自带的日志实现   -->
         <dependency>
             <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-jdk14</artifactId>
+            <artifactId>slf4j-simple</artifactId>
         </dependency>
-
     </dependencies>
 
 </project>

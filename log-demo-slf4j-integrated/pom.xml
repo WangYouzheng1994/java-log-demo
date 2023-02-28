@@ -36,11 +36,11 @@
     </dependencies>
 
     <modules>
-        <module>1-slf4j-simple</module>
-        <module>2-slf4j-jul</module>
-        <module>3-slf4j-log4j</module>
-        <module>4-slf4j-logback</module>
-        <module>5-slf4j-multiimport</module>
+        <module>a-slf4j-simple</module>
+        <module>b-slf4j-jul</module>
+        <module>c-slf4j-log4j</module>
+        <module>d-slf4j-logback</module>
+        <module>e-slf4j-multiimport</module>
     </modules>
 
     <build>
