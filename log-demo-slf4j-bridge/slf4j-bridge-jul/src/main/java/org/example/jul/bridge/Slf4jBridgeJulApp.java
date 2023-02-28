@@ -1,15 +1,17 @@
 package org.example.jul.bridge;
 
 
+import org.slf4j.bridge.SLF4JBridgeHandler;
+
 import java.util.logging.Logger;
 
 /**
- * @Description: slf4j 使用桥接器 解决原有项目使用log4j后，引入slf4j的报错的问题。
+ * @Description: slf4j 使用桥接器 解决原有项目使用jul后，桥接给logback
  * @Author: WangYouzheng
  * @Date: 2022/7/13 15:11
  * @Version: V1.0
  */
-public class Slf4jBridgeLog4jApp {
+public class Slf4jBridgeJulApp {
     public static void main(String[] args) {
         logNative();
     }
@@ -18,6 +20,8 @@ public class Slf4jBridgeLog4jApp {
      * 使用原生JUL
      */
     public static void logNative() {
+        SLF4JBridgeHandler.removeHandlersForRootLogger();
+        SLF4JBridgeHandler.install();
         Logger logger = Logger.getAnonymousLogger();
         logger.info("我是jul的info");
         logger.warning("我是jul的warn");
