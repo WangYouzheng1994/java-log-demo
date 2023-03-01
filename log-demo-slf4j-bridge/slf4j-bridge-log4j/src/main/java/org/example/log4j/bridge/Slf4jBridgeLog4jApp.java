@@ -3,7 +3,7 @@ package org.example.log4j.bridge;
 import org.apache.log4j.Logger;
 
 /**
- * @Description: slf4j 使用log4j桥接器 把 转向slf4j  最后实际指向logback进行输出
+ * @Description: slf4j 使用log4j桥接器  转向slf4j  最后实际指向logback进行输出
  * @Author: WangYouzheng
  * @Date: 2022/7/13 15:11
  * @Version: V1.0

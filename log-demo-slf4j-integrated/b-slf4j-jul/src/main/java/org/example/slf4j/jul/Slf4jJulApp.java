@@ -19,5 +19,7 @@ public class Slf4jJulApp {
         logger.info("slf4j + JUL");
         logger.debug("slf4j + JUL");
         logger.warn("slf4j + JUL");
+        logger.trace("slf4j + JUL");
+        logger.error("slf4j + jul");
     }
 }
