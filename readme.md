@@ -6,6 +6,6 @@ https://note.youdao.com/s/U5i80Z8b
 2. log-demo-slf4j-integrated  slf4j和常见日志框架整合
 3. log-demo-slf4j-bridge slf4j进行桥接
 4. log-demo-logback 精准演示logback
-5. log4j2 及其异步日志
+5. log4j2 及其异步日志 f-slf4j-log4j2中的 org.example.slf4j.log4j2.async包
 6. springboot整合日志框架
 7. 自定义appender替代elk

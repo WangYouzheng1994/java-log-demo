@@ -23,15 +23,15 @@ public class Slf4jLog4j2AsyncAppenderApp {
      * 异步
      */
     static void asyncAppenderLog() {
-        System.setProperty("log4j2.configurationFile", "async/log4j2-splitfile.xml");
+        System.setProperty("log4j2.configurationFile", "async/global/appender/log4j2-asyncappender.xml");
         Logger logger = LoggerFactory.getLogger(Slf4jLog4j2AsyncAppenderApp.class);
         System.out.println(System.currentTimeMillis());
         for (int i = 0; i < 5; i++) {
-            logger.error("slf4j + log4j2 error");
-            logger.warn("slf4j + log4j2 warn");
-            logger.info("slf4j + log4j2 info");
-            logger.debug("slf4j + log4j debug");
-            logger.trace("slf4j + log4j2 trace");
+            logger.error("slf4j + log4j2 error, 当前循环{}", i);
+            logger.warn("slf4j + log4j2 warn, 当前循环{}", i);
+            logger.info("slf4j + log4j2 info, 当前循环{}", i);
+            logger.debug("slf4j + log4j debug, 当前循环{}", i);
+            logger.trace("slf4j + log4j2 trace, 当前循环{}", i);
         }
         System.out.println(System.currentTimeMillis());
     }

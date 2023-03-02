@@ -1,4 +1,4 @@
-package org.example.slf4j.log4j2.async.global;
+package org.example.slf4j.log4j2.async.mixed;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
