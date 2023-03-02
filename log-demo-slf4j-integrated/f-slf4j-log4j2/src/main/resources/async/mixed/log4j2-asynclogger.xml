@@ -15,7 +15,13 @@
                 <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
             </PatternLayout>
         </Console>
-        <Console name="console_normal" target="SYSTEM_OUT"></Console>
+
+        <!--    system out    -->
+        <Console name="console_normal" target="SYSTEM_OUT">
+            <PatternLayout>
+                <Pattern>%d %p %c{1.}-%m - %L [%t] %m%n</Pattern>
+            </PatternLayout>
+        </Console>
 
         <!--    https://logging.apache.org/log4j/2.x/manual/appenders.html#FileAppender    -->
         <File name="file_appender" fileName="${logDir}/log4j2.log">
@@ -47,14 +53,8 @@
             </Policies>
 
             <!--      单目录中，文件个数限制为30个，超过这30个那么根据时间覆盖：新覆盖掉旧的~      -->
-            <DefaultRolloverStrateg max="30"/>
-
+            <DefaultRolloverStrategy max="30"/>
         </RollingFile>
-
-        <!--   AsyncAppender实现异步日志  说白了就是起了个线程去处理引用的appender，用线程池套了一层   -->
-            <AppenderRef ref="console"></AppenderRef>
-            <AppenderRef ref="console_normal"></AppenderRef>
-            <AppenderRef ref="file_appender"></AppenderRef>
     </Appenders>
 
 
@@ -63,13 +63,17 @@
         <!--        <Logger name="org.apache.test" level="trace" additivity="false">
                     <AppenderRef ref="Out"/>
                 </Logger>-->
-        <!--    trace级别    -->
-        <Root level="trace">
-<!--            <AppenderRef ref="console_normal"></AppenderRef>-->
+        <AsyncLogger name="org.example.slf4j.log4j2.async.mixed.cat" level="trace" includeLocation="true"
+                     additivity="true">
             <AppenderRef ref="console_normal"/>
-<!--            <AppenderRef ref="file_appender"></AppenderRef>-->
-<!--            <AppenderRef ref="roll_split"></AppenderRef>-->
+        </AsyncLogger>
 
+        <!--  RootLogger设置为trace级别    -->
+        <Root level="warning">
+            <!--            <AppenderRef ref="console_normal"></AppenderRef>-->
+            <AppenderRef ref="console"/>
+            <!--            <AppenderRef ref="file_appender"></AppenderRef>-->
+            <!--            <AppenderRef ref="roll_split"></AppenderRef>-->
         </Root>
     </Loggers>
 </Configuration>

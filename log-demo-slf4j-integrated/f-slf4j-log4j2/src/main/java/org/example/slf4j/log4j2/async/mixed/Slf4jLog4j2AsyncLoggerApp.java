@@ -1,5 +1,6 @@
 package org.example.slf4j.log4j2.async.mixed;
 
+import org.example.slf4j.log4j2.async.mixed.cat.Cat;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -13,18 +14,17 @@ import org.slf4j.LoggerFactory;
  */
 public class Slf4jLog4j2AsyncLoggerApp {
     public static void main(String[] args) {
-        // 同步日志
-//         syncLog();
 
-        // 异步日志
+        System.setProperty("log4j2.configurationFile", "async/mixed/log4j2-asynclogger.xml");
         asyncAppenderLog();
+        Cat.logOut();
     }
 
     /**
      * 异步，使用asyncLogger
      */
     static void asyncAppenderLog() {
-        System.setProperty("log4j2.configurationFile", "async/global/logger/log4j2-asynclogger.xml");
+
         Logger logger = LoggerFactory.getLogger(Slf4jLog4j2AsyncLoggerApp.class);
         System.out.println(System.currentTimeMillis());
         for (int i = 0; i < 5; i++) {

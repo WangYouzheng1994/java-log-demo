@@ -47,7 +47,7 @@
             </Policies>
 
             <!--      单目录中，文件个数限制为30个，超过这30个那么根据时间覆盖：新覆盖掉旧的~      -->
-            <DefaultRolloverStrateg max="30"/>
+            <DefaultRolloverStrategy max="30"/>
 
         </RollingFile>
 
