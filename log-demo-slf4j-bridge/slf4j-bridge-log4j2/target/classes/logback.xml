@@ -1,0 +1,26 @@
+<configuration>
+<!--    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        &lt;!&ndash; "application-name" is a variable &ndash;&gt;
+        <File>c://logs/${application-name}.log</File>
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>%d %p %t %c - %c %m%n</Pattern>
+        </layout>
+    </appender>-->
+
+<!--    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>%d %p %t %c - %c %m%n</Pattern>
+        </layout>
+    </appender>-->
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- encoders are assigned the type
+             ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} -11111 - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <root level="debug">
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+        <artifactId>log-demo-slf4j-bridge</artifactId>
+        <groupId>org.example</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>slf4j-bridge-log4j2</artifactId>
+    <name>slf4j-bridge-log4j2</name>
+
+    <build>
+        <finalName>slf4j-bridge-log4j2</finalName>
+    </build>
+
+
+    <!-- Project dependencies -->
+    <dependencies>
+        <!-- log4j 引入桥接包以后，需要屏蔽对应的原生框架包
+       <dependency>
+          <groupId>log4j</groupId>
+          <artifactId>log4j</artifactId>
+        </dependency>
+        -->
+
+        <!--         slf4j Bridge Log4j2 START-->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-to-slf4j</artifactId>
+            <version>2.19.0</version>
+        </dependency>
+        <!--        slf4j Bridge Log4j2 END-->
+
+        <!--  LogBack 这样就可以实现log4j2桥接到slf4j-> logback 不用改代码api，还是log4j2 api调用-->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+        </dependency>
+
+        <!--slf4j 兼容 log4j 1.x 适配，这样就可以实现桥接到slf4j-> log4j 不用改代码api，还是log4j api调用
+       <dependency>
+         <groupId>org.slf4j</groupId>
+         <artifactId>slf4j-reload4j</artifactId>
+       </dependency>
+       -->
+
+
+    </dependencies>
+</project>

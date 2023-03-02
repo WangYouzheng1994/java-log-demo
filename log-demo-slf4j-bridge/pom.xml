@@ -16,6 +16,7 @@
   <modules>
     <module>slf4j-bridge-log4j</module>
     <module>slf4j-bridge-jul</module>
+    <module>slf4j-bridge-log4j2</module>
   </modules>
 
   <dependencies>
