@@ -1,4 +1,5 @@
-package com.example.springbootdemo;
+package com.example.log4j2demo;
+
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

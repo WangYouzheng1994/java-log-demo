@@ -119,11 +119,17 @@
                 <version>${slf4j.version}</version>
             </dependency>
 
-            <!--   slf4j门面与 log4j2 适配集成   -->
+            <!--   slf4j门面与 log4j2 适配集成 log4j-slf4j-impl should be used with SLF4J 1.7.x releases or older.  -->
             <dependency>
                 <groupId>org.apache.logging.log4j</groupId>
                 <artifactId>log4j-slf4j-impl</artifactId>
                 <version>${log4j2.slf4j.version}</version>
+            </dependency>
+            <!-- slf4j门面与 log4j2 适配集成should be used with SLF4J 2.0.x releases or newer.-->
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-slf4j2-impl</artifactId>
+                <version>2.20.0</version>
             </dependency>
 
             <!--    slf4j Bridge Log4j-->
