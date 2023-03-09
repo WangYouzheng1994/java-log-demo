@@ -57,5 +57,5 @@ log4j-slf4j2-impl should be used with SLF4J 2.0.x releases or newer.
 ```
 无需变配置文件，jvm加个参数就行了
 ```
-2. 混合异步
+2. mixedAsync混合异步
 > 混合异步的目的在于，不太重要的日志 可以用异步进行处理，但是一些敏感重要日志必须要同步执行

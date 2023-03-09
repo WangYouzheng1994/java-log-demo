@@ -33,6 +33,8 @@ https://docs.spring.io/spring-boot/docs/current/reference/html/features.html#fea
 
 2. 使用logback-spring.xml 才是标准的
 
+---
+
 ## springboot 重新集成logj2
 1. 屏蔽当前springboot的日志框架
 2. 引入log4j2

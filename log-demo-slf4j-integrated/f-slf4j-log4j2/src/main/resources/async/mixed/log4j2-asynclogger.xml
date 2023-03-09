@@ -69,11 +69,29 @@
         </AsyncLogger>
 
         <!--  RootLogger设置为trace级别    -->
-        <Root level="warning">
+        <Root level="warn">
             <!--            <AppenderRef ref="console_normal"></AppenderRef>-->
             <AppenderRef ref="console"/>
             <!--            <AppenderRef ref="file_appender"></AppenderRef>-->
             <!--            <AppenderRef ref="roll_split"></AppenderRef>-->
         </Root>
+<!--     ++++++++++++++++++++++   -->
+       <!-- <AsyncLogger name="org.example.slf4j.log4j2.async.mixed.dog" level="debug" includeLocation="true"
+                     additivity="true">
+            <AppenderRef ref="console_normal"/>
+        </AsyncLogger>-->
+        <!-- <AsyncLogger name="org.example.slf4j.log4j2.async.mixed.dog" level="debug" includeLocation="true"
+                     additivity="true">
+            <AppenderRef ref="console_normal"/>
+        </AsyncLogger>-->
+        <!-- <AsyncLogger name="org.example.slf4j.log4j2.async.mixed.dog" level="debug" includeLocation="true"
+                     additivity="true">
+            <AppenderRef ref="console_normal"/>
+        </AsyncLogger>-->
+        <!-- <AsyncLogger name="org.example.slf4j.log4j2.async.mixed.dog" level="debug" includeLocation="true"
+                     additivity="true">
+            <AppenderRef ref="console_normal"/>
+        </AsyncLogger>-->
+
     </Loggers>
 </Configuration>
